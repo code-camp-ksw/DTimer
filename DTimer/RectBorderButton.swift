@@ -25,6 +25,13 @@ public class RectBorderButton: UIButton {
                                               right: paddingLeftRight)
     }
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder:coder)
+        
+    }
+    
+    
+    
     // MARK: Public interface
     
     @IBInspectable public var cornerRadius: CGFloat = 8 {
