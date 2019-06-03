@@ -18,7 +18,7 @@ class FirstViewController: UIViewController {
     var seconds = 60
     var timer = Timer()
     var isTimerRunning = false
-    var resumeTapped = false
+    var resumeTapped = true
     var setTitle = "Stop"
 
     override func viewDidLoad() {
@@ -40,9 +40,7 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
-        if isTimerRunning == false {
-            runTimer()
-        }
+      
     }
     
     
@@ -68,6 +66,11 @@ class FirstViewController: UIViewController {
     }
     
     @IBAction func buttonstoptapped(_ sender: UIButton) {
+//        if isTimerRunning == false {
+//            runTimer()
+//        }
+        
+        
         if self.resumeTapped == false {
             timer.invalidate()
             self.resumeTapped = true

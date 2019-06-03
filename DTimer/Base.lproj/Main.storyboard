@@ -18,33 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsK-lS-fCQ">
-                                <rect key="frame" x="40" y="453" width="90" height="45"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="5aF-ka-osb"/>
-                                    <constraint firstAttribute="height" constant="45" id="kbX-qO-LJo"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Start">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lU-JW-OfW">
                                 <rect key="frame" x="245" y="453" width="90" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -74,7 +47,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" name="systemBlueColor" catalog="System" colorSpace="catalog"/>
-                                <state key="normal" title="Stop">
+                                <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -109,11 +82,9 @@
                         <color key="tintColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
                         <constraints>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="5lU-JW-OfW" secondAttribute="bottom" constant="120" id="Kng-zd-59e"/>
-                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="rsK-lS-fCQ" secondAttribute="bottom" constant="120" id="T8f-30-Ic5"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="5lU-JW-OfW" secondAttribute="trailing" constant="40" id="V56-qE-c37"/>
                             <constraint firstItem="GDJ-rh-h46" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="foE-mr-Pxd"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="GDJ-rh-h46" secondAttribute="bottom" constant="120" id="kXh-nV-kVV"/>
-                            <constraint firstItem="rsK-lS-fCQ" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="40" id="tOf-bK-Wtu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
