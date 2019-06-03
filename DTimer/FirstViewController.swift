@@ -10,13 +10,9 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
+    @IBOutlet weak var datepicker: UIDatePicker!
     @IBOutlet weak var timerlabel: UITextField!
     @IBOutlet weak var ButtonStartPause: UIButton!
-    @IBAction func SliderTime(_ sender: UISlider){
-        seconds = Int(sender.value)
-        timerlabel.text = "00:00:" + String(seconds)
-    }
-    @IBOutlet weak var SliderTime2: UISlider!
     
     
     var seconds = 60
@@ -25,7 +21,23 @@ class FirstViewController: UIViewController {
     var resumeTapped = false
     var setTitle = "Stop"
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        let initalisationdate = Calendar.current.date(bySettingHour: 0, minute: 5, second: 0, of: Date()) ?? Date()
+        datepicker.setDate(initalisationdate, animated: true)
+        datepickervaluechanged(datepicker)
+    }
     
+    @IBAction func datepickervaluechanged(_ sender: UIDatePicker) {
+
+        print("datepickervaluechanged")
+        let date = sender.date
+        let components = Calendar.current.dateComponents([.hour, . minute], from: date)
+        let hour = components.hour!
+        let minute = components.minute!
+        timerlabel.text = String(format: "%02d", hour) + ":" + String(format: "%02d", minute) + ":00"
+    }
     
     @IBAction func startButtonTapped(_ sender: UIButton) {
         if isTimerRunning == false {
@@ -60,7 +72,6 @@ class FirstViewController: UIViewController {
             timer.invalidate()
             self.resumeTapped = true
             ButtonStartPause.setTitle("Resume", for: .normal)
-            SliderTime2.setValue(60, animated: true)
             
         }
         else {
@@ -87,12 +98,7 @@ class FirstViewController: UIViewController {
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-    
-    
+
 
 
 
