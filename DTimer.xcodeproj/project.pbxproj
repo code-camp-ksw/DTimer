@@ -18,6 +18,8 @@
 		36A8DDC92299379200DC9BA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36A8DDC72299379200DC9BA6 /* LaunchScreen.storyboard */; };
 		36A8DDD42299379200DC9BA6 /* DTimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8DDD32299379200DC9BA6 /* DTimerTests.swift */; };
 		36A8DDDF2299379200DC9BA6 /* DTimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A8DDDE2299379200DC9BA6 /* DTimerUITests.swift */; };
+		36B0B02A22BFD77400BCFF52 /* AddToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B0B02922BFD77400BCFF52 /* AddToDoTableViewController.swift */; };
+		36B0B02C22BFD79E00BCFF52 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B0B02B22BFD79E00BCFF52 /* ToDoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		36A8DDDA2299379200DC9BA6 /* DTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A8DDDE2299379200DC9BA6 /* DTimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DTimerUITests.swift; sourceTree = "<group>"; };
 		36A8DDE02299379200DC9BA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36B0B02922BFD77400BCFF52 /* AddToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToDoTableViewController.swift; path = VC/AddToDoTableViewController.swift; sourceTree = "<group>"; };
+		36B0B02B22BFD79E00BCFF52 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoTableViewController.swift; path = VC/ToDoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				36A8DDBE2299379100DC9BA6 /* FirstViewController.swift */,
 				36A8DDC02299379100DC9BA6 /* SecondViewController.swift */,
 				36A8DDC22299379100DC9BA6 /* Main.storyboard */,
+				36B0B02B22BFD79E00BCFF52 /* ToDoTableViewController.swift */,
+				36B0B02922BFD77400BCFF52 /* AddToDoTableViewController.swift */,
 				36A8DDC52299379200DC9BA6 /* Assets.xcassets */,
 				36A8DDC72299379200DC9BA6 /* LaunchScreen.storyboard */,
 				36A8DDCA2299379200DC9BA6 /* Info.plist */,
@@ -279,8 +285,10 @@
 			files = (
 				36A8DDC12299379100DC9BA6 /* SecondViewController.swift in Sources */,
 				36844D92229A946C000E4747 /* AddToDoViewController.swift in Sources */,
+				36B0B02C22BFD79E00BCFF52 /* ToDoTableViewController.swift in Sources */,
 				36A8DDBD2299379100DC9BA6 /* AppDelegate.swift in Sources */,
 				36A8DDBF2299379100DC9BA6 /* FirstViewController.swift in Sources */,
+				36B0B02A22BFD77400BCFF52 /* AddToDoTableViewController.swift in Sources */,
 				36844D94229A954F000E4747 /* ToDoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

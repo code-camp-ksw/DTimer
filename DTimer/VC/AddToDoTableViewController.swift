@@ -1,5 +1,5 @@
 //
-//  ToDoTableViewController.swift
+//  AddToDoTableViewController.swift
 //  DTimer
 //
 //  Created by Nino Liner on 23.06.19.
@@ -8,20 +8,23 @@
 
 import UIKit
 
-class ToDoTableViewController: UITableViewController {
+class AddToDoTableViewController: UITableViewController {
+    @IBOutlet weak var TextView: UITextView!
+    @IBOutlet weak var SliderTime: UISlider!
+    @IBOutlet weak var CancelButton: UIButton!
+    @IBOutlet weak var CreateButton: UIButton!
+    
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-    }
 
     // MARK: - Table view data source
 
+
+    @IBAction func Cancel(_ sender: Any) {
+    }
+    @IBAction func Create(_ sender: Any) {
+    }
+    
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0

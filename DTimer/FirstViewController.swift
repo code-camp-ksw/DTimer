@@ -15,11 +15,12 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var ButtonStartPause: UIButton!
     
     
-    var seconds = 60
+    var startdate = TimeInterval()
     var timer = Timer()
     var isTimerRunning = false
     var resumeTapped = true
     var setTitle = "Stop"
+    var setTitle2 = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,23 +47,23 @@ class FirstViewController: UIViewController {
     
     func renameClassButton(sender: UIButton) {
         ButtonStartPause.setTitle("Start", for: .normal)
-        
     }
+    
+    
+    
     @objc
     func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(self.updateTimer)), userInfo: nil, repeats: true)
         isTimerRunning = true
-    
     }
-        
+    
+    
     @objc
     func updateTimer() {
-        seconds -= 1
-        timerlabel.text = timeString(time: TimeInterval(seconds))
+        startdate = startdate-1
+        timerlabel.text = timeString(time: startdate)
         
-        if (seconds == 0)
-        { timer.invalidate()
-        }
+        //TO DO check if timer is 0
     }
     
     @IBAction func buttonstoptapped(_ sender: UIButton) {
@@ -75,18 +76,32 @@ class FirstViewController: UIViewController {
             timer.invalidate()
             self.resumeTapped = true
             ButtonStartPause.setTitle("Resume", for: .normal)
-            
-        }
-        else {
+        } else {
+            startdate = datepicker.countDownDuration
             runTimer()
             self.resumeTapped = false
-        };ButtonStartPause.setTitle("Stop", for: .normal)
+        }
+        
+        if setTitle2 == 0{
+            setTitle2 = 1
+            ButtonStartPause.setTitle("Stop", for: .normal)
+        }else{
+            setTitle2 = 0
+        ButtonStartPause.setTitle("Start", for: .normal)
+        }
     }
+    
+    
     @IBAction func buttonrefreshtapped(_ sender: UIButton) {
         timer.invalidate()
-        seconds = 00
-        timerlabel.text = String(format:"%02i:%02i:%02i", 0, 0, seconds)
+      
         isTimerRunning = false
+        let initalisationdate = Calendar.current.date(bySettingHour: 0, minute: 5, second: 0, of: Date()) ?? Date()
+        timerlabel.text = dateString(date: initalisationdate)
+        datepicker.setDate(initalisationdate, animated: true)
+        datepickervaluechanged(datepicker)
+        ButtonStartPause.setTitle("Start", for: .normal)
+        
     }
 
     
@@ -95,12 +110,25 @@ class FirstViewController: UIViewController {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
-    
-        
-    
     }
     
+    func dateString(date:Date) -> String {
+        
+        
+        // *** create calendar object ***
+        let calendar = Calendar.current
 
+        // *** Get All components from date ***
+        let components = calendar.dateComponents([.hour, .year, .minute], from: date)
+        print("All Components : \(components)")
+        
+        // *** Get Individual components from date ***
+        let hours = calendar.component(.hour, from: date)
+        let minutes = calendar.component(.minute, from: date)
+        let seconds = calendar.component(.second, from: date)
+       return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    }
+    
 
 
 
