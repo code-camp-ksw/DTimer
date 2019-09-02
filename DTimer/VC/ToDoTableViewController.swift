@@ -9,9 +9,12 @@
 import UIKit
 
 class ToDoTableViewController: UITableViewController {
-
+    var todoitems = ToDoItem.getAllItems()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -24,12 +27,12 @@ class ToDoTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 2
     }
 
     /*
